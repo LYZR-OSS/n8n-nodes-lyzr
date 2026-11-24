@@ -1,0 +1,57 @@
+{
+	"name": "n8n-nodes-lyzr",
+	"version": "0.2.0",
+	"description": "Run Lyzr agents, search Lyzr knowledge bases and apply Lyzr guardrails from n8n workflows",
+	"license": "MIT",
+	"homepage": "https://github.com/LYZR-OSS/n8n-nodes-lyzr#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"lyzr",
+		"ai-agent",
+		"guardrails",
+		"rag"
+	],
+	"author": {
+		"name": "Lyzr",
+		"email": "shreehari@lyzr.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LYZR-OSS/n8n-nodes-lyzr.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "npm run build && node --test test/*.test.js",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/LyzrApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/LyzrAgent/LyzrAgent.node.js",
+			"dist/nodes/LyzrKnowledgeBase/LyzrKnowledgeBase.node.js",
+			"dist/nodes/LyzrGuardrails/LyzrGuardrails.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

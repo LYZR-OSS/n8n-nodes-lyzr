@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-lyzr.lyzrAgent",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://github.com/LYZR-OSS/n8n-nodes-lyzr?tab=readme-ov-file#credentials" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://github.com/LYZR-OSS/n8n-nodes-lyzr?tab=readme-ov-file" }
+		]
+	}
+}
