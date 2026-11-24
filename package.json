@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-lyzr",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Run Lyzr agents, search Lyzr knowledge bases and apply Lyzr guardrails from n8n workflows",
 	"license": "MIT",
 	"homepage": "https://github.com/LYZR-OSS/n8n-nodes-lyzr#readme",
