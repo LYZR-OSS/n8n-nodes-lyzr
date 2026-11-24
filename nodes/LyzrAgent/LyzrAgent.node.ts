@@ -27,6 +27,16 @@ export class LyzrAgent implements INodeType {
 		credentials: [{ name: 'lyzrApi', required: true }],
 		properties: [
 			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{ name: 'Send Message', value: 'sendMessage', action: 'Send a message to an agent' },
+				],
+				default: 'sendMessage',
+			},
+			{
 				displayName: 'Agent Name or ID',
 				name: 'agentId',
 				type: 'options',

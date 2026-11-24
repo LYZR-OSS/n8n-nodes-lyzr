@@ -27,6 +27,14 @@ export class LyzrKnowledgeBase implements INodeType {
 		credentials: [{ name: 'lyzrApi', required: true }],
 		properties: [
 			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				options: [{ name: 'Search', value: 'search', action: 'Search a knowledge base' }],
+				default: 'search',
+			},
+			{
 				displayName: 'Knowledge Base Name or ID',
 				name: 'knowledgeBaseId',
 				type: 'options',

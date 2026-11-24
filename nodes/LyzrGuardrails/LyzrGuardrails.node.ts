@@ -27,6 +27,20 @@ export class LyzrGuardrails implements INodeType {
 		credentials: [{ name: 'lyzrApi', required: true }],
 		properties: [
 			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{
+						name: 'Check Text',
+						value: 'checkText',
+						action: 'Check text against a guardrail policy',
+					},
+				],
+				default: 'checkText',
+			},
+			{
 				displayName: 'Policy Name or ID',
 				name: 'policyId',
 				type: 'options',
